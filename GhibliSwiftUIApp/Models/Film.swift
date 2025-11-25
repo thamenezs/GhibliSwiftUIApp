@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct Film: Codable, Identifiable {
+struct Film: Codable, Identifiable, Equatable {
     let id: String
     let title: String
     let originalTitle: String
