@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct Film: Codable, Identifiable, Equatable {
+struct Film: Codable, Identifiable, Equatable, Hashable {
     let id: String
     let title: String
     let originalTitle: String
@@ -30,6 +30,11 @@ struct Film: Codable, Identifiable, Equatable {
         case duration = "running_time"
         case score = "rt_score"
         case originalTitle = "original_title"
+    }
+    
+    //MARK: Preview
+    static var example: Film {
+        MockAPIService().fetchFilm()
     }
 }
 
